@@ -65,6 +65,7 @@ git commit -m “Message” - commits the files to the repository along w/ the b
 
 #### To link to a GitHub Repository:
 
+
 Create repository on GitHub
 
 Do init and commit like usual
@@ -96,6 +97,7 @@ Use the command atom fileName inside the directory where the file lives to open 
 
 ### Backtracking in Git
 
+
 The commit you’re currently in is called the HEAD commit
 
 To show it: git show HEAD
@@ -115,32 +117,56 @@ To reset back to a specific git commit, you’ll need the first 7 characters of 
 Git reset SHA 
 
 ### Branching in Git
+
+
 Changes made to branches do not affect the master branch until you merge the branch back into the master
+
 git branch — tells you which branch you’re on (indicated by a asterisk)
+
 To create a new branch: git branch new_branch
+
 To switch to a branch: git checkout branch_name
+
 Now all commits will go with this branch and not affect the master branch
+
 An asterisk will indicate which branch you’re on when you type git branch
+
 To merge a branch back into master: git merge branch_name
+
 The branch you’re about to merge into master is the giver branch
+
 The master branch is the receiver branch
+
 YOU NEED TO BE IN THE MASTER BRANCH BEFORE TYPING IN THE MERGE COMMAND (git checkout master)
+
 Merge conflict == when you merge a branch into the master which has had subsequent changes made since you created the branch
+
 Git uses marking to indicate the HEAD (master) version of the file and the branch version of the file).  [See below] 
+
 It then asks us which version of the file to keep.  Make any changes and be sure to delete any markings git adds to the code editor.
+
 To delete a branch: git branch -d branch_name
+
 Make sure the master branch has all the changes you want first!
 
+
 ### Cloning a git repo and working remotely
+
+
 To clone a git repo: git clone remote_location clone_name
+
 remote_location = where to find the repo (web address, file path, etc.)
+
 clone_name = name to give to the directory in which Git will clone the repo
+
 Git names the remote_location: origin for future reference
+
 To view the git project’s remotes using: git remote -v
+
 To retrieve changes made to the remote repo: git fetch
-To integrate changes from remote repo into your local master branch: 
-git merge origin/master
-To push changes to the remote repo: git push origin your_branch_name
-git push origin master if working with the main branch
+
+To integrate changes from remote repo into your local master branch: git merge origin/master
+
+To push changes to the remote repo: git push origin your_branch_name: git push origin master if working with the main branch
  
 
