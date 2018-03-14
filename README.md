@@ -4,62 +4,113 @@ Terminal & Git Notes
 
 ### Terminal Commands
 cd - change directory
+
 ls - list files and folders
+
 ls -a  — list all files and folders, including hidden ones
+
 pwd - print working director (shows path to current location)  
+
 mkdir - makes a new folder
+
 touch - makes a new file (include extension w/ the name)
+
 rm - removes file
+
 rm -rf  - to remove a folder
+
 mv <file-old> <file-new> — Renames the file
+
 mv <file> <director> — Moves file to directory
+ 
 cp <file> <directory> — Copy file to directory
+ 
 cp <directory1> <directory2> — Copy first directory to a new directory 
+
 clear - clears the terminal window
+
 open . — opens the current folder in the Finder window (dot indicates current folder)
+
 atom . — will open Atom editor and the current folder you’re in
 
+
 ### Git Commands
+
 git argument -flag
-To set user name & email in the config file:
+
+
+#### To set user name & email in the config file:
+
 git config —global user.name “FirstName Last Name”
+
 git config —global user.email “email@youremail.com"
-To create a Git Repository:
+
+
+#### To create a Git Repository:
+
 Navigate to the folder you want or create a new folder then navigate inside of it
+
 git init — initializes a new repository inside the folder you’re currently it & git will start tracking the changes you now make
+
 git status — displays status, including uncommitted files
+
 git add filename1 filename2  — stages a commit, adds the current files in the current folder to the upcoming commit
+
 To add the whole folder & all files in it: git add .
+
 To remove files from the staging area: git reset HEAD filename
+
 git commit -m “Message” - commits the files to the repository along w/ the brief message about the commit, include useful message abt what changed
-To link to a GitHub Repository:
+
+
+#### To link to a GitHub Repository:
+
 Create repository on GitHub
+
 Do init and commit like usual
+
 git remote add origin http://github.com/userName/repoName — links to the repo
+
 git push -u origin master — use -u origin master the first time you push to create the master branch
+
 To check status: git remote -v 
+
 To push local changes to the GitHub repo, need to use git push origin master
 
 Forking a repository creates a copy of the GitHub repo under your account
+
 This allows you to make changes without affecting the code in the original repo
+
 The use the Clone/Download button to get the URL to download the repo onto your computer
+
 In your local computer’s terminal, navigate to the desired folder, then
+
 git clone http://github.com/projectURL
+
 Use init, add & commit to save changes locally, but need to use push to move them to GitHub
+
 TO TURN IN PRIME ASSIGNMENTS: COPY AND PASTE THE URL FOR YOUR FORK REPO FOR THE ASSIGNMENT
+
 Use the command atom fileName inside the directory where the file lives to open the file in Atom and load the other project files in the file browser
 
+
 ### Backtracking in Git
+
 The commit you’re currently in is called the HEAD commit
+
 To show it: git show HEAD
+
 To restore the file in your working directory back to the last commit
 git checkout HEAD filename
 Need to include the filename in the command!!
+
 To check for changes, use: git diff
+
 Print out git commit log: git log
 -p — shows the differences introduced in each commit
 -2 — limits the log to the last two entries
 - -stat — shows abbreviated stats for each commit
+
 To reset back to a specific git commit, you’ll need the first 7 characters of that commit’s SHA
 Git reset SHA 
 
