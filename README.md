@@ -48,17 +48,24 @@ git config —global user.email “email@youremail.com"
 
 #### To create a Git Repository:
 
-Navigate to the folder you want or create a new folder then navigate inside of it
+1. Navigate to the folder you want or create a new folder then navigate inside of it
 
-git init — initializes a new repository inside the folder you’re currently it & git will start tracking the changes you now make
+1. On the command line type `git init` — which initializes a new repository inside the folder you’re currently it & git will start tracking the changes you now make
 
-git status — displays status, including uncommitted files
+1. Then type `git status` —  which displays status, including any uncommitted files. If a file shows as "untracked" that means Git sees that as a new file.
 
-git add filename1 filename2  — stages a commit, adds the current files in the current folder to the upcoming commit
+1. In order to have Git track any changes to the files in your folder you need to *add* the files to the staging area. Once files have been added Git will monitor them for any changes made to them so you know if you need to commit those changes to the online repo. There are two ways to do this: you can either track specific files or you can track the entire folder that Git is connected to:
 
-To add the whole folder & all files in it: git add .
+ * type `git add filename1 filename2` (example - `git add readme.md` ) — this stages a commit, adds the current files in the current folder to the upcoming commit
 
-To remove files from the staging area: git reset HEAD filename
+ * To add the whole folder you are currently in & all files in it type: `git add .`
+
+1. You can then verify that those files/folders are in the staging area by typing `git status`. This should show you the files that you just added in the previous step. Notice how Git says changes to be committed? The files listed here are in the Staging Area, and they are not in our repository yet. We could add or remove files from the stage before we store them in the repository.
+
+To store our staged changes we run the commit command with a message describing what we've changed. Let's do that now by typing: 
+ 
+
+#### To remove files from the staging area: git reset HEAD filename
 
 git commit -m “Message” - commits the files to the repository along w/ the brief message about the commit, include useful message abt what changed
 
