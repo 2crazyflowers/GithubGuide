@@ -62,16 +62,12 @@ git config —global user.email “email@youremail.com"
 
 1. You can then verify that those files/folders are in the staging area by typing `git status`. This should show you the files that you just added in the previous step. Notice how Git says changes to be committed? The files listed here are in the Staging Area, and they are not in our repository yet. We could add or remove files from the stage before we store them in the repository.
 
-To store our staged changes we run the commit command with a message describing what we've changed. Let's do that now by typing: 
- 
+1. To remove files from the staging area: `git reset HEAD filename`
 
-#### To remove files from the staging area: git reset HEAD filename
-
-git commit -m “Message” - commits the files to the repository along w/ the brief message about the commit, include useful message abt what changed
+1. To store our staged changes we run the commit command with a message describing the changes you've made. This is done by typing `git commit -m "notes of changes you've made"`. This commits the files to the repository along w/ the brief message about the commit, include useful message about what was changed.
 
 
 #### To link to a GitHub Repository:
-
 
 Create repository on GitHub
 
